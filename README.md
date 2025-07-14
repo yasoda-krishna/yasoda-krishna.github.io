@@ -69,6 +69,7 @@ Review the HTML, CSS, and JavaScript code for best practices, and suggest optimi
 - **Be Specific with Prompts:** The more detailed your prompt, the better the output.
 - **Iterate as Needed:** Don't hesitate to ask ChatGPT for revisions or further explanations.
 - **Test Frequently:** Regularly check the code in your browser to catch any issues early.
+- **Enhanced Navigation:** Smooth scrolling links and a floating scroll-to-top button improve usability.
 - **Learn Along the Way:** Use this as an opportunity to improve your coding skills by studying the generated code.
 
 If you have any doubts, you can reach out to me at yasodaakrishna@gmail.com
