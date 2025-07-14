@@ -307,3 +307,32 @@ navLinks.addEventListener('click', () => {
     });
   }
 });
+
+// Smooth scrolling for navigation links
+const navAnchors = document.querySelectorAll('.nav-links a');
+navAnchors.forEach((anchor) => {
+  anchor.addEventListener('click', (e) => {
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: { y: target, offsetY: 70 },
+        ease: 'power2.out'
+      });
+    }
+  });
+});
+
+// Scroll to top button
+const scrollBtn = document.getElementById('scrollToTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    scrollBtn.classList.add('show');
+  } else {
+    scrollBtn.classList.remove('show');
+  }
+});
+scrollBtn.addEventListener('click', () => {
+  gsap.to(window, { duration: 1, scrollTo: { y: 0 }, ease: 'power2.out' });
+});
