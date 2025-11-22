@@ -4,7 +4,7 @@ gsap.registerPlugin(ScrollTrigger);
 // Typing Effect
 const typingText = document.getElementById('typing-text');
 const roles = [
-  "Principal Software Engineer",
+  "Software Engineer",
   "System Architect",
   "Distributed Systems Expert",
   "AI Engineering Lead"
