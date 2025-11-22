@@ -39,57 +39,100 @@
     </div>
   </nav>
 
-  <!-- Home Section -->
+  <!-- Hero Section -->
   <section id="home" class="section">
     <div class="content">
       <h1 class="hero-title">Yasoda Krishna Annapureddy</h1>
       <div class="hero-subtitle" id="typing-text"></div>
+      <p class="hero-summary">
+        Principal Software Engineer & System Architect. I design, code, and scale distributed systems that power global
+        retail operations. With deep expertise in backend engineering, cloud architecture, and reliability, I bridge the
+        gap between complex code and massive scale.
+      </p>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="section">
+  <!-- Technical Identity Section -->
+  <section id="identity" class="section identity-section">
     <div class="content">
-      <h1>About Me</h1>
-      <p>
-        I manage and automate deployments, observability, and reliability for thousands of Kubernetes clusters at
-        Walmart—building AI-powered SRE tools, enhancing Istio-based service mesh operations, driving org-wide
-        deployment strategies, and leading high-scale troubleshooting across CPC systems.
-      </p>
-      <p>
-        I am a Senior SRE/DevOps Engineer at Walmart, working across cloud + 4,600+ edge Kubernetes clusters in the CPC
-        (Customer Platform & Checkout) organization. My work spans deployment strategy, observability, automation,
-        microservices reliability, and AI-driven tooling.
-      </p>
+      <h1>Technical Identity</h1>
+      <p class="section-intro">What I bring to the table as a developer-first leader:</p>
+      <div class="identity-grid">
+        <div class="identity-card">
+          <i class="fas fa-server"></i>
+          <h3>Scalable Backends</h3>
+          <p>Building high-throughput, low-latency systems using Java, Python, and Node.js.</p>
+        </div>
+        <div class="identity-card">
+          <i class="fas fa-network-wired"></i>
+          <h3>Distributed Systems</h3>
+          <p>Architecting resilient microservices, event-driven flows, and cloud-native infrastructure.</p>
+        </div>
+        <div class="identity-card">
+          <i class="fas fa-cogs"></i>
+          <h3>Production Automation</h3>
+          <p>Engineering self-healing systems, CI/CD pipelines, and developer tooling.</p>
+        </div>
+        <div class="identity-card">
+          <i class="fas fa-brain"></i>
+          <h3>AI-Enhanced Engineering</h3>
+          <p>Integrating LLMs and AI agents to revolutionize observability and operations.</p>
+        </div>
+      </div>
     </div>
   </section>
+
 
   <!-- Experience Section -->
   <section id="experience" class="section">
     <div class="content">
-      <h1>Experience Log</h1>
-      <div class="timeline">
+      <h1>Engineering Journey</h1>
+      <div class="timeline-container">
+        <svg class="timeline-svg">
+          <path class="timeline-path" d="" />
+        </svg>
 
         <!-- Walmart -->
         <div class="timeline-item left">
           <div class="timeline-content">
             <div class="terminal-header">
-              <span>root@walmart-cpc:~</span>
+              <span>root@walmart-global-tech:~</span>
               <div class="terminal-controls">
                 <div class="terminal-dot"></div>
                 <div class="terminal-dot"></div>
                 <div class="terminal-dot"></div>
               </div>
             </div>
-            <div class="terminal-command">./view_job --id=walmart --role=sre</div>
+            <div class="terminal-command">./exec_engineering --scope=nationwide --clusters=4600+</div>
             <h2>Walmart Global Tech</h2>
-            <div class="card-subtitle">Senior SRE/DevOps Engineer</div>
+            <div class="card-subtitle">Software Engineer III (SRE & Distributed Systems)</div>
             <div class="card-date">Present</div>
-            <ul>
-              <li>Managed 4,600+ Edge Kubernetes clusters.</li>
-              <li>Led Stage1 → Stage4 progressive rollouts.</li>
-              <li>Designed AI SRE Agent for auto-remediation.</li>
-            </ul>
+
+            <div class="role-section">
+              <h4><i class="fas fa-server"></i> Architecture & Scale</h4>
+              <ul>
+                <li><strong>Hybrid Cloud/Edge:</strong> Architected reliability for a hybrid control plane managing
+                  <strong>4,600+ Kubernetes clusters</strong> across heterogeneous edge hardware.</li>
+                <li><strong>Progressive Delivery:</strong> Designed a multi-phase rollout strategy (Pilot → 25 → 100 →
+                  500 → Fleet) using <strong>Argo & Flagger</strong>, ensuring zero-downtime updates for millions of
+                  daily transactions.</li>
+                <li><strong>Holiday Readiness:</strong> Led full-system profiling and stress testing for Black
+                  Friday/Holiday peak, certifying microservices for resilience under burst loads.</li>
+              </ul>
+            </div>
+
+            <div class="role-section">
+              <h4><i class="fas fa-code-branch"></i> Engineering Verticals</h4>
+              <ul>
+                <li><strong>Performance Tuning:</strong> Optimized JVM G1GC garbage collection and thread pools,
+                  eliminating memory leaks in async pipelines and reducing CPU throttling by 60%.</li>
+                <li><strong>Zero-Downtime Migrations:</strong> Executed nationwide Helm2 → Helm3 and Vault → Akeyless
+                  migrations with fallback readers, maintaining 100% uptime.</li>
+                <li><strong>Observability Cost:</strong> Reduced metric ingestion costs by <strong>50%</strong> by
+                  pruning 200+ high-cardinality metrics and optimizing histogram buckets.</li>
+              </ul>
+            </div>
+            <div class="connector-dot"></div>
           </div>
         </div>
 
@@ -97,21 +140,38 @@
         <div class="timeline-item right">
           <div class="timeline-content">
             <div class="terminal-header">
-              <span>dev@iqit-solutions:~</span>
+              <span>lead@iqit-solutions:~</span>
               <div class="terminal-controls">
                 <div class="terminal-dot"></div>
                 <div class="terminal-dot"></div>
                 <div class="terminal-dot"></div>
               </div>
             </div>
-            <div class="terminal-command">./view_job --id=iqit --role=swe</div>
+            <div class="terminal-command">./modernize_stack --target=microservices</div>
             <h2>IQIT Solutions</h2>
             <div class="card-subtitle">Software Engineer</div>
             <div class="card-date">Jan 2024 – Jul 2024</div>
-            <ul>
-              <li>Developed TrueCare app (React/Spring Boot).</li>
-              <li>Optimized microservices with Docker/K8s.</li>
-            </ul>
+
+            <div class="role-section">
+              <h4><i class="fas fa-cubes"></i> Microservices Modernization</h4>
+              <ul>
+                <li><strong>Architecture:</strong> Decomposed monolithic applications into Spring Boot microservices,
+                  implementing <strong>Kafka consumer groups</strong> for parallel batch processing.</li>
+                <li><strong>Performance:</strong> Reduced latency by <strong>30%</strong> by eliminating blocking
+                  database accesses and optimizing async flows.</li>
+              </ul>
+            </div>
+
+            <div class="role-section">
+              <h4><i class="fas fa-shield-alt"></i> Security & Platform</h4>
+              <ul>
+                <li><strong>Security:</strong> Implemented Spring Security with token rotation and rate limiting for
+                  healthcare data protection.</li>
+                <li><strong>Containerization:</strong> Migrated legacy infrastructure to Docker/Kubernetes, improving
+                  deployment velocity and scalability.</li>
+              </ul>
+            </div>
+            <div class="connector-dot"></div>
           </div>
         </div>
 
@@ -119,21 +179,36 @@
         <div class="timeline-item left">
           <div class="timeline-content">
             <div class="terminal-header">
-              <span>student@isu-edu:~</span>
+              <span>researcher@geophysical-tech:~</span>
               <div class="terminal-controls">
                 <div class="terminal-dot"></div>
                 <div class="terminal-dot"></div>
                 <div class="terminal-dot"></div>
               </div>
             </div>
-            <div class="terminal-command">./view_job --id=isu --role=grad_assistant</div>
-            <h2>Illinois State University</h2>
-            <div class="card-subtitle">Graduate Assistant</div>
+            <div class="terminal-command">./ingest_data --rate=high_frequency</div>
+            <h2>Geophysical Technology / ISU</h2>
+            <div class="card-subtitle">Software Engineer & Researcher</div>
             <div class="card-date">Aug 2022 – Dec 2023</div>
-            <ul>
-              <li>Built ISU Code app for exam automation.</li>
-              <li>Implemented OAuth/SSO security.</li>
-            </ul>
+
+            <div class="role-section">
+              <h4><i class="fas fa-microchip"></i> Low-Level Systems</h4>
+              <ul>
+                <li><strong>Real-Time Ingestion:</strong> Built high-frequency C/Java multithreaded sensor data
+                  ingestion systems with microsecond precision using lock-free queues.</li>
+                <li><strong>Kernel Tuning:</strong> Optimized Linux IRQ pinning and network stack (sysctl rmem/wmem) for
+                  predictable interrupt handling and throughput.</li>
+              </ul>
+            </div>
+
+            <div class="role-section">
+              <h4><i class="fas fa-lock"></i> Security Engineering</h4>
+              <ul>
+                <li><strong>Identity:</strong> Engineered robust SSO/OAuth2 authentication systems for university
+                  academic platforms.</li>
+              </ul>
+            </div>
+            <div class="connector-dot"></div>
           </div>
         </div>
 
@@ -148,14 +223,21 @@
                 <div class="terminal-dot"></div>
               </div>
             </div>
-            <div class="terminal-command">./view_job --id=ncr --role=swe</div>
+            <div class="terminal-command">./process_transactions --consistency=strict</div>
             <h2>NCR Corporation</h2>
             <div class="card-subtitle">Software Engineer</div>
             <div class="card-date">Feb 2021 – Aug 2022</div>
-            <ul>
-              <li>Enhanced Exxon Mobil Rewards app.</li>
-              <li>Migrated 100+ Windows images to Linux.</li>
-            </ul>
+
+            <div class="role-section">
+              <h4><i class="fas fa-money-check-alt"></i> Financial Engineering</h4>
+              <ul>
+                <li><strong>Transaction Integrity:</strong> Designed idempotent Rewards Transaction APIs using timestamp
+                  vectors to ensure <strong>99.99% accuracy</strong> and replay safety.</li>
+                <li><strong>Firmware Porting:</strong> Engineered the migration of critical fuel controller firmware
+                  from Windows to Linux, enhancing stability for edge devices.</li>
+              </ul>
+            </div>
+            <div class="connector-dot"></div>
           </div>
         </div>
 
@@ -163,58 +245,132 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
+  <!-- Systems Thinking Section -->
+  <section id="systems" class="section">
+    <div class="content">
+      <h1>Systems Thinking & Architecture</h1>
+      <p class="section-intro">Design principles for massive scale and reliability.</p>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Progressive Delivery</div>
+          </div>
+          <p>I don't just deploy; I orchestrate. Using <strong>Argo and Flagger</strong>, I implemented a "Stage1 →
+            Stage4" rollout strategy that validates SLOs (latency, error rates) at every batch (25 → 100 → 500 clusters)
+            before proceeding, preventing fleet-wide outages.</p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Resilience Engineering</div>
+          </div>
+          <p>Systems must survive network partitions. I design for the edge, ensuring checkout workflows function even
+            with degraded WAN connectivity, using local caching and eventual consistency models for telemetry.</p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Performance Profiling</div>
+          </div>
+          <p>Deep-dive optimization is key. I use <strong>JFR (Java Flight Recorder)</strong> to analyze thread pools
+            and GC behavior, tuning heap compaction and eliminating serialization loops to meet strict p99 latency
+            targets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership Section -->
+  <section id="leadership" class="section">
+    <div class="content">
+      <h1>Leadership & Impact</h1>
+      <p class="section-intro">Driving engineering excellence across the organization.</p>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Holiday Readiness Lead</div>
+          </div>
+          <p>Pivotal role in certifying 4,600+ clusters for Black Friday. Led full-system stress testing, failure mode
+            validation (packet loss, node churn), and microservice certification to ensure uninterrupted checkout
+            operations.</p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Cost Optimization</div>
+          </div>
+          <p>Engineered a <strong>50% reduction</strong> in observability costs by identifying and pruning 200+ unused
+            high-cardinality metrics and optimizing Prometheus scrape intervals.</p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">MTTR Reduction</div>
+          </div>
+          <p>Reduced Mean Time To Resolution by <strong>40%</strong> through the creation of deterministic SRE playbooks
+            and automated root cause analysis templates adopted org-wide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Matrix -->
   <section id="skills" class="section">
     <div class="content">
-      <h1>Technical Skills</h1>
-      <div class="skills-container">
+      <h1>Advanced Skills Matrix</h1>
+      <p class="section-intro">Technical depth for distributed systems engineering.</p>
+      <div class="skills-matrix">
 
-        <div class="skill-category">
-          <h3>Kubernetes & Cloud</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Kubernetes (K8s)</span>
-            <span class="skill-tag">Azure</span>
-            <span class="skill-tag">Helm3</span>
-            <span class="skill-tag">ArgoCD</span>
-            <span class="skill-tag">Istio Service Mesh</span>
-            <span class="skill-tag">Docker</span>
+        <div class="matrix-row">
+          <div class="matrix-category">Distributed Systems</div>
+          <div class="matrix-items">
+            <span class="skill-tag">Consensus Models</span>
+            <span class="skill-tag">Event-Driven Arch</span>
+            <span class="skill-tag">Multi-Cluster Orchestration</span>
+            <span class="skill-tag">CAP Theorem</span>
+            <span class="skill-tag">Edge Computing</span>
+          </div>
+        </div>
+
+        <div class="matrix-row">
+          <div class="matrix-category">Kubernetes & Cloud</div>
+          <div class="matrix-items">
+            <span class="skill-tag">Custom CRDs</span>
+            <span class="skill-tag">Operator Pattern</span>
+            <span class="skill-tag">Helm3 (Advanced)</span>
+            <span class="skill-tag">Argo Rollouts</span>
             <span class="skill-tag">Flagger</span>
+            <span class="skill-tag">Istio/Envoy</span>
           </div>
         </div>
 
-        <div class="skill-category">
-          <h3>Observability & Monitoring</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Prometheus (PromQL)</span>
-            <span class="skill-tag">Grafana</span>
-            <span class="skill-tag">Splunk</span>
-            <span class="skill-tag">OpenObserve</span>
-            <span class="skill-tag">Datadog</span>
-            <span class="skill-tag">ELK Stack</span>
+        <div class="matrix-row">
+          <div class="matrix-category">SRE & Reliability</div>
+          <div class="matrix-items">
+            <span class="skill-tag">SLO/SLI Design</span>
+            <span class="skill-tag">Error Budgets</span>
+            <span class="skill-tag">Chaos Engineering</span>
+            <span class="skill-tag">Auto-Remediation</span>
+            <span class="skill-tag">Incident Command</span>
           </div>
         </div>
 
-        <div class="skill-category">
-          <h3>Automation & Languages</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Java Spring Boot</span>
+        <div class="matrix-row">
+          <div class="matrix-category">Performance</div>
+          <div class="matrix-items">
+            <span class="skill-tag">JVM Tuning (G1GC)</span>
+            <span class="skill-tag">Thread Profiling (JFR)</span>
+            <span class="skill-tag">Kernel Tuning (eBPF/Sysctl)</span>
+            <span class="skill-tag">Latency Optimization</span>
+            <span class="skill-tag">Async Pipelines</span>
+          </div>
+        </div>
+
+        <div class="matrix-row">
+          <div class="matrix-category">Languages</div>
+          <div class="matrix-items">
+            <span class="skill-tag">Java (Expert)</span>
+            <span class="skill-tag">Python (Expert)</span>
+            <span class="skill-tag">C/C++</span>
             <span class="skill-tag">Go</span>
-            <span class="skill-tag">Bash Scripting</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">SQL/NoSQL</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <h3>DevOps & Tools</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">CI/CD (Looper, Concord)</span>
-            <span class="skill-tag">Git/GitHub</span>
-            <span class="skill-tag">Jira/Confluence</span>
-            <span class="skill-tag">Kafka</span>
-            <span class="skill-tag">Redis</span>
+            <span class="skill-tag">Bash</span>
+            <span class="skill-tag">SQL</span>
           </div>
         </div>
 
@@ -222,40 +378,105 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Flagship Case Studies -->
   <section id="projects" class="section">
     <div class="content">
-      <h1>Projects & Innovation</h1>
+      <h1>Flagship Engineering Case Studies</h1>
+      <p class="section-intro">Deep dives into complex systems I've architected and built.</p>
       <div class="card-grid">
 
         <div class="card">
           <div class="card-header">
+            <div class="card-title">4,600+ Cluster Fleet</div>
+            <div class="card-subtitle">Distributed Systems | Edge Computing</div>
+          </div>
+          <div class="role-section">
+            <h4>The Challenge</h4>
+            <p>Managing 4,600+ independent Kubernetes clusters across retail stores with variable network conditions and
+              hardware. Manual updates were impossible.</p>
+          </div>
+          <div class="role-section">
+            <h4>The Architecture</h4>
+            <p>Built a <strong>GitOps-driven control plane</strong> using ArgoCD and Flagger. Designed a custom "Wave
+              Rollout" controller that promotes artifacts from Pilot → Region → National fleet based on real-time health
+              metrics.</p>
+          </div>
+          <div class="role-section">
+            <h4>Key Engineering</h4>
+            <p>Implemented <strong>automated canary analysis</strong> checking p99 latency and error rates. Built
+              fallback mechanisms for disconnected edge clusters to ensure eventual consistency.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
             <div class="card-title">AI SRE Agent</div>
-            <div class="card-subtitle">Python, LLM, Prometheus, Slack API</div>
+            <div class="card-subtitle">Python | LLM | Prometheus</div>
           </div>
-          <p>Designing an AI-driven SRE agent that listens to Slack alerts, parses error logs, auto-queries Prometheus
-            and OpenObserve for metrics, and uses LLMs to analyze root causes and post business impact summaries
-            directly to Slack threads.</p>
+          <div class="role-section">
+            <h4>The Challenge</h4>
+            <p>Alert fatigue and slow MTTR due to high volumes of repetitive infrastructure alerts across the massive
+              fleet.</p>
+          </div>
+          <div class="role-section">
+            <h4>The Solution</h4>
+            <p>Engineered an autonomous Python agent that listens to alerts, queries <strong>Prometheus &
+                OpenObserve</strong> for context, and uses an LLM to perform root cause analysis and suggest
+              remediation.</p>
+          </div>
+          <div class="role-section">
+            <h4>Impact</h4>
+            <p>Automated triage for <strong>80%</strong> of production alerts and reduced MTTR by 40%, freeing up
+              significant engineering time.</p>
+          </div>
         </div>
 
         <div class="card">
           <div class="card-header">
-            <div class="card-title">Multi-Cluster Automation</div>
-            <div class="card-subtitle">Python, K8s API, AsyncIO</div>
+            <div class="card-title">Zero-Downtime Migrations</div>
+            <div class="card-subtitle">Infrastructure | Security</div>
           </div>
-          <p>Built high-concurrency Python automation scripts to perform health checks and query metrics across 4,600+
-            edge Kubernetes clusters, significantly reducing manual troubleshooting time.</p>
+          <div class="role-section">
+            <h4>The Challenge</h4>
+            <p>Migrating critical infrastructure components (Helm2→3, Vault→Akeyless) across 4,600+ live clusters
+              without disrupting checkout operations.</p>
+          </div>
+          <div class="role-section">
+            <h4>The Strategy</h4>
+            <p>Designed <strong>dual-read/write paths</strong> and fallback logic. Implemented automated linting and
+              dry-run simulations on edge replicas to catch regressions before rollout.</p>
+          </div>
+          <div class="role-section">
+            <h4>Outcome</h4>
+            <p>Completed nationwide migrations with <strong>zero downtime</strong> and 100% data integrity.</p>
+          </div>
         </div>
 
-        <div class="card">
-          <div class="card-header">
-            <div class="card-title">Houseanywhere</div>
-            <div class="card-subtitle">Java, Spring Boot, Angular</div>
-          </div>
-          <p>Created a platform to assist students in finding temporary housing. Facilitated housing searches for over
-            1,000 international students and increased property listings by 50%.</p>
-        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- AI + Developer Automation Portfolio -->
+  <section id="ai-automation" class="section">
+    <div class="content">
+      <h1>AI + Developer Automation</h1>
+      <p class="section-intro">Building the tools that build the software.</p>
+      <div class="identity-grid">
+        <div class="identity-card">
+          <i class="fas fa-robot"></i>
+          <h3>Log Analysis Bot</h3>
+          <p>Automated log parsing and anomaly detection using Python and OpenObserve VRL functions.</p>
+        </div>
+        <div class="identity-card">
+          <i class="fas fa-check-circle"></i>
+          <h3>Cluster Health Checks</h3>
+          <p>Async Python scripts to perform parallel health checks across thousands of K8s clusters.</p>
+        </div>
+        <div class="identity-card">
+          <i class="fas fa-code"></i>
+          <h3>Code Quality Auto</h3>
+          <p>Integrated JaCoCo and SonarQube into CI pipelines to enforce quality gates automatically.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -283,11 +504,38 @@
     </div>
   </section>
 
+  <!-- Future Roadmap Section -->
+  <section id="roadmap" class="section">
+    <div class="content">
+      <h1>What I'm Building Next</h1>
+      <p class="section-intro">Exploring the frontier of software engineering.</p>
+      <div class="identity-grid">
+        <div class="identity-card">
+          <i class="fas fa-robot"></i>
+          <h3>Distributed AI Agents</h3>
+          <p>Designing multi-agent systems that can autonomously manage complex infrastructure and business workflows.
+          </p>
+        </div>
+        <div class="identity-card">
+          <i class="fas fa-cubes"></i>
+          <h3>High-Scale Backends</h3>
+          <p>Pushing the limits of concurrency in Java and Python to handle next-generation data volumes.</p>
+        </div>
+        <div class="identity-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Autonomous Reliability</h3>
+          <p>Building self-driving reliability systems that predict and prevent outages before they impact users.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact Section -->
   <section id="contact" class="section">
     <div class="content">
       <h1>Contact Me</h1>
-      <p style="text-align: center;">Let's connect to discuss DevOps, SRE, or AI-driven infrastructure.</p>
+      <p style="text-align: center;">Let's connect to discuss Distributed Systems, AI Engineering, or High-Scale
+        Architecture.</p>
       <div class="contact-links">
         <a href="mailto:yasodaakrishna@gmail.com" class="contact-item">
           <i class="fas fa-envelope"></i>

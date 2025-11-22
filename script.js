@@ -4,10 +4,10 @@ gsap.registerPlugin(ScrollTrigger);
 // Typing Effect
 const typingText = document.getElementById('typing-text');
 const roles = [
-  "Senior SRE/DevOps Engineer",
-  "Kubernetes Expert",
-  "Automation Architect",
-  "AI-Driven Ops Pioneer"
+  "Principal Software Engineer",
+  "System Architect",
+  "Distributed Systems Expert",
+  "AI Engineering Lead"
 ];
 let roleIndex = 0;
 let charIndex = 0;
@@ -97,11 +97,85 @@ sections.forEach(section => {
   );
 });
 
-// Timeline Animations
-const timelineItems = document.querySelectorAll('.timeline-item');
+// Curved Timeline Logic
+function drawTimelineCurve() {
+  const svg = document.querySelector('.timeline-svg');
+  const path = document.querySelector('.timeline-path');
+  const dots = document.querySelectorAll('.connector-dot');
+  const container = document.querySelector('.timeline-container');
 
+  if (!svg || !path || dots.length === 0) return;
+
+  // Reset path
+  let d = "";
+
+  // Get container offset
+  const containerRect = container.getBoundingClientRect();
+  const startX = containerRect.width / 2;
+  const startY = 0;
+
+  // Start point (top center)
+  d += `M ${startX} ${startY}`;
+
+  // Loop through dots to create curve
+  dots.forEach((dot, index) => {
+    const dotRect = dot.getBoundingClientRect();
+    const dotX = dotRect.left + dotRect.width / 2 - containerRect.left;
+    const dotY = dotRect.top + dotRect.height / 2 - containerRect.top;
+
+    // Previous point (or start)
+    let prevX, prevY;
+    if (index === 0) {
+      prevX = startX;
+      prevY = startY;
+    } else {
+      const prevDot = dots[index - 1].getBoundingClientRect();
+      prevX = prevDot.left + prevDot.width / 2 - containerRect.left;
+      prevY = prevDot.top + prevDot.height / 2 - containerRect.top;
+    }
+
+    // Control points for smooth Bezier curve
+    const cp1x = prevX;
+    const cp1y = prevY + (dotY - prevY) / 2;
+    const cp2x = dotX;
+    const cp2y = prevY + (dotY - prevY) / 2;
+
+    d += ` C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${dotX} ${dotY}`;
+  });
+
+  // Set path data
+  path.setAttribute('d', d);
+
+  // Animate path drawing on scroll
+  const pathLength = path.getTotalLength();
+  path.style.strokeDasharray = pathLength;
+  path.style.strokeDashoffset = pathLength;
+
+  gsap.to(path, {
+    strokeDashoffset: 0,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".timeline-container",
+      start: "top center",
+      end: "bottom bottom",
+      scrub: 1
+    }
+  });
+}
+
+// Redraw on resize
+window.addEventListener('resize', drawTimelineCurve);
+
+// Initial draw after load
+window.addEventListener('load', () => {
+  // Small delay to ensure layout is settled
+  setTimeout(drawTimelineCurve, 100);
+});
+
+// Timeline Item Animations (Fade In)
+const timelineItems = document.querySelectorAll('.timeline-item');
 timelineItems.forEach((item, index) => {
-  const direction = index % 2 === 0 ? -50 : 50; // Slide from left or right
+  const direction = index % 2 === 0 ? -50 : 50;
 
   gsap.fromTo(item,
     { x: direction, opacity: 0 },

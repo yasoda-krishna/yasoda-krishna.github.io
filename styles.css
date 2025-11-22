@@ -448,114 +448,107 @@ footer {
 
 /* ... existing styles ... */
 
-/* Hacker Timeline Styles */
-.timeline {
+/* Curved Timeline Styles */
+.timeline-container {
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
   padding: 40px 0;
 }
 
-.timeline::after {
-  content: '';
+.timeline-svg {
   position: absolute;
-  width: 2px;
-  background: var(--accent-color);
   top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -1px;
-  box-shadow: 0 0 10px var(--accent-glow);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.timeline-path {
+  fill: none;
+  stroke: var(--accent-color);
+  stroke-width: 3;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 5px var(--accent-glow));
 }
 
 .timeline-item {
-  padding: 10px 40px;
   position: relative;
-  background-color: inherit;
-  width: 50%;
-  box-sizing: border-box;
-}
-
-.timeline-item::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  right: -10px;
-  background-color: var(--bg-color);
-  border: 2px solid var(--accent-color);
-  top: 15px;
-  border-radius: 50%;
+  width: 45%;
+  /* Leave space in middle */
+  margin-bottom: 60px;
   z-index: 1;
-  box-shadow: 0 0 10px var(--accent-glow);
 }
 
-.left {
-  left: 0;
+.timeline-item.left {
+  margin-left: 0;
+  margin-right: auto;
 }
 
-.right {
-  left: 50%;
-}
-
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid var(--accent-color);
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent var(--accent-color);
-}
-
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid var(--accent-color);
-  border-width: 10px 10px 10px 0;
-  border-color: transparent var(--accent-color) transparent transparent;
-}
-
-.right::after {
-  left: -10px;
+.timeline-item.right {
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .timeline-content {
-  padding: 20px;
+  padding: 25px;
   background-color: #000;
-  position: relative;
   border: 1px solid var(--accent-color);
-  border-radius: 4px;
+  border-radius: 8px;
   font-family: var(--font-mono);
-  box-shadow: 0 0 15px rgba(0, 243, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(0, 243, 255, 0.2);
+}
+
+/* Connector Dots for SVG */
+.connector-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #000;
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-glow);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left .connector-dot {
+  right: -6%;
+  /* Position outside the card towards center */
+}
+
+.right .connector-dot {
+  left: -6%;
+  /* Position outside the card towards center */
 }
 
 /* Terminal Header */
 .terminal-header {
   background-color: var(--accent-color);
   color: #000;
-  padding: 5px 10px;
+  padding: 8px 15px;
   font-size: 12px;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--accent-color);
-  margin: -20px -20px 15px -20px;
+  margin: -25px -25px 20px -25px;
   /* Pull to edges */
+  border-radius: 7px 7px 0 0;
 }
 
 .terminal-controls {
   display: flex;
-  gap: 5px;
+  gap: 6px;
 }
 
 .terminal-dot {
@@ -563,12 +556,166 @@ footer {
   height: 10px;
   border-radius: 50%;
   background-color: #000;
+  opacity: 0.7;
+}
+
+/* Hero Summary */
+.hero-summary {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 30px auto 0;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* Identity Section */
+.identity-section {
+  background-color: #0f0f0f;
+  /* Slightly lighter than main bg */
+}
+
+.section-intro {
+  font-size: 20px;
+  color: var(--accent-color);
+  margin-bottom: 40px;
+  font-family: var(--font-mono);
+}
+
+.identity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.identity-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.identity-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 30px rgba(0, 243, 255, 0.1);
+}
+
+.identity-card i {
+  font-size: 40px;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.identity-card h3 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+
+/* ... existing styles ... */
+
+/* Timeline Role Sections */
+.role-section {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.role-section h4 {
+  font-size: 16px;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  font-family: var(--font-mono);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.role-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.role-section ul li {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.role-section ul li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--secondary-accent);
+  font-size: 12px;
+  top: 4px;
+}
+
+
+/* ... existing styles ... */
+
+/* Skills Matrix */
+.skills-matrix {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.matrix-row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 20px;
+}
+
+.matrix-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.matrix-category {
+  width: 200px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.matrix-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .matrix-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .matrix-category {
+    width: 100%;
+    margin-bottom: 5px;
+  }
 }
 
 .terminal-command {
   color: var(--secondary-accent);
-  font-size: 14px;
-  margin-bottom: 10px;
+  font-size: 13px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
 }
 
 .terminal-command::before {
@@ -577,37 +724,19 @@ footer {
 }
 
 /* Responsive Timeline */
-@media screen and (max-width: 600px) {
-  .timeline::after {
-    left: 31px;
-  }
-
+@media screen and (max-width: 768px) {
   .timeline-item {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
+    width: 90%;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
-  .timeline-item::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+  .timeline-path {
+    display: none;
+    /* Hide curve on mobile for simplicity */
   }
 
-  .left::after,
-  .right::after {
-    left: 21px;
-  }
-
-  .right {
-    left: 0%;
-  }
-
-  .left::before,
-  .right::before {
-    left: 60px;
-    border-color: transparent var(--accent-color) transparent transparent;
-    border-width: 10px 10px 10px 0;
+  .connector-dot {
+    display: none;
   }
 }
