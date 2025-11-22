@@ -2,48 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Yasoda Krishna Annapureddy | Portfolio</title>
+  <title>Yasoda Krishna Annapureddy | Senior SRE/DevOps Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Link to CSS -->
   <link rel="stylesheet" href="styles.css">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
   <!-- Font Awesome Icons -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
   <!-- Navigation -->
-  <!-- Navigation -->
-<nav>
-  <div class="nav-container">
-    <div class="logo">
-      <a href="index.html">
-        <img src="images/logo.png" alt="Website Logo" style="height: 40px;">
-      </a>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">&lt;YKA /&gt;</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <!-- Hamburger Menu Icon -->
+      <div class="burger">
+        <i class="fas fa-bars"></i>
+      </div>
     </div>
-    <ul class="nav-links">
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <!-- Hamburger Menu Icon -->
-    <div class="burger">
-      <i class="fas fa-bars"></i>
-    </div>
-  </div>
-</nav>
+  </nav>
 
   <!-- Home Section -->
-  <section id="home" class="section" style="background-image: url('images/home-bg.jpg');">
+  <section id="home" class="section">
     <div class="content">
-      <h1 class="glowing-text">Yasoda Krishna Annapureddy</h1>
-      <p>Software Engineer | Data Scientist</p>
+      <h1 class="hero-title">Yasoda Krishna Annapureddy</h1>
+      <div class="hero-subtitle" id="typing-text"></div>
     </div>
   </section>
 
@@ -52,8 +48,11 @@
     <div class="content">
       <h1>About Me</h1>
       <p>
-        I am a versatile software engineer with a strong foundation in computer science and a passion for creating impactful solutions. With experience across various domains, from developing web applications and enhancing system performance to data analysis and machine learning, I thrive on tackling complex challenges and optimizing processes. I blend technical expertise with a commitment to innovation and continuous learning, always seeking new opportunities to drive success and make a meaningful difference. Open to new challenges and relocation, I’m excited to contribute to a forward-thinking team.
-       </p>
+        I manage and automate deployments, observability, and reliability for thousands of Kubernetes clusters at Walmart—building AI-powered SRE tools, enhancing Istio-based service mesh operations, driving org-wide deployment strategies, and leading high-scale troubleshooting across CPC systems.
+      </p>
+      <p>
+        I am a Senior SRE/DevOps Engineer at Walmart, working across cloud + 4,600+ edge Kubernetes clusters in the CPC (Customer Platform & Checkout) organization. My work spans deployment strategy, observability, automation, microservices reliability, and AI-driven tooling.
+      </p>
     </div>
   </section>
 
@@ -61,35 +60,157 @@
   <section id="experience" class="section">
     <div class="content">
       <h1>Professional Experience</h1>
-      <div class="experience-item">
-        <h2>IQIT Solutions | Software Engineer</h2>
-        <span class="date">Jan 2024 – Jul 2024</span>
-        <ul>
-          <li>Developed the TrueCare application using React and Java Spring Boot, enhancing usability for over 65,000 users and providers, and reducing load times by 20%.</li>
-          <li>Created the Request Records feature using Java Spring MVC and SQL Server, streamlining medical records requests and improving user experience by 25%.</li>
-          <li>Implemented SSIS scripts with SQL Server and SQL Developer to retrieve member and provider data, reducing data processing time by 30% and improving data accuracy.</li>
-          <li>Utilized Docker and Kubernetes for microservices architecture, improving deployment efficiency by 35%, and Kafka for service communication, enhancing system scalability and reliability by 40%.</li>
-          <li>Worked on the TIER 2 team to develop new features and resolve production bugs, increasing overall application stability by 50%.</li>
-        </ul>
+      <div class="card-grid">
+        
+        <!-- Walmart -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Walmart Global Tech</div>
+            <div class="card-subtitle">Senior SRE/DevOps Engineer</div>
+            <div class="card-date">Present</div>
+          </div>
+          <ul>
+            <li><strong>Kubernetes & Deployment Infrastructure:</strong> Manage multi-tenant Kubernetes platforms (Azure + 4,600+ Edge clusters). Lead deployments using Helm3, Flagger canary analysis, and Istio service mesh. Handle progressive rollouts (Stage1 → Stage4) using Looper CI, Concord, and ArgoCD.</li>
+            <li><strong>Observability & Monitoring:</strong> Deep expertise in Prometheus (PromQL, SLOs), Grafana (latency, p99 trends), OpenObserve, and Splunk. Proactively monitor 5xx/4xx spikes and investigate requestRoute-level failures.</li>
+            <li><strong>Service Mesh (Istio):</strong> Manage VirtualService, DestinationRule, Sidecar injection, and failover configurations. Troubleshoot mTLS and Envoy performance issues.</li>
+            <li><strong>Large-Scale Automation:</strong> Build Python automation for multi-cluster health checks and Slack-triggered workflows. Design concurrency scripts to query metrics across thousands of clusters.</li>
+            <li><strong>AI-Driven SRE:</strong> Designing an AI SRE Agent that parses Slack alerts, auto-queries Prometheus/OpenObserve, analyzes errors using LLM, and posts root cause analysis.</li>
+          </ul>
+        </div>
+
+        <!-- IQIT Solutions -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">IQIT Solutions</div>
+            <div class="card-subtitle">Software Engineer</div>
+            <div class="card-date">Jan 2024 – Jul 2024</div>
+          </div>
+          <ul>
+            <li>Developed the TrueCare application using React and Java Spring Boot, enhancing usability for over 65,000 users.</li>
+            <li>Utilized Docker and Kubernetes for microservices architecture, improving deployment efficiency by 35%.</li>
+            <li>Implemented SSIS scripts with SQL Server to reduce data processing time by 30%.</li>
+          </ul>
+        </div>
+
+        <!-- Illinois State University -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Illinois State University</div>
+            <div class="card-subtitle">Graduate Assistant</div>
+            <div class="card-date">Aug 2022 – Dec 2023</div>
+          </div>
+          <ul>
+            <li>Developed the ISU Code application using Node.js, React, and OAuth, automating the testing process for over 200 students.</li>
+            <li>Implemented student authentication using SSO and OAuth, enhancing security.</li>
+          </ul>
+        </div>
+
+        <!-- NCR Corporation -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">NCR Corporation</div>
+            <div class="card-subtitle">Software Engineer</div>
+            <div class="card-date">Feb 2021 – Aug 2022</div>
+          </div>
+          <ul>
+            <li>Developed the Exxon Mobil Rewards application using Java, improving transaction processing efficiency by 30%.</li>
+            <li>Converted over 100 Windows-based images to Linux-based images for fuel controllers, enhancing system performance.</li>
+          </ul>
+        </div>
+
       </div>
-      <!-- Repeat for other experiences -->
-      <div class="experience-item">
-        <h2>Illinois State University | Graduate Assistant</h2>
-        <span class="date">Aug 2022 – Dec 2023</span>
-        <ul>
-          <li>Developed and deployed the ISU Code application using Node.js, React, and OAuth, automating the testing and exam process for over 200 students and improving efficiency by 40%.</li>
-          <li>Implemented student authentication using Illinois State University SSO and OAuth, enhancing security and streamlining access for more than 1,500 users.</li>
-          <li>Designed and executed automated test cases using Java, securely stored results in a SQL database, and integrated the system with Canvas, reducing grading time by 50% and providing immediate feedback to students.</li>
-        </ul>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="content">
+      <h1>Technical Skills</h1>
+      <div class="skills-container">
+        
+        <div class="skill-category">
+          <h3>Kubernetes & Cloud</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Kubernetes (K8s)</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">Helm3</span>
+            <span class="skill-tag">ArgoCD</span>
+            <span class="skill-tag">Istio Service Mesh</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Flagger</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Observability & Monitoring</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Prometheus (PromQL)</span>
+            <span class="skill-tag">Grafana</span>
+            <span class="skill-tag">Splunk</span>
+            <span class="skill-tag">OpenObserve</span>
+            <span class="skill-tag">Datadog</span>
+            <span class="skill-tag">ELK Stack</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Automation & Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java Spring Boot</span>
+            <span class="skill-tag">Go</span>
+            <span class="skill-tag">Bash Scripting</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">SQL/NoSQL</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>DevOps & Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">CI/CD (Looper, Concord)</span>
+            <span class="skill-tag">Git/GitHub</span>
+            <span class="skill-tag">Jira/Confluence</span>
+            <span class="skill-tag">Kafka</span>
+            <span class="skill-tag">Redis</span>
+          </div>
+        </div>
+
       </div>
-      <div class="experience-item">
-        <h2>NCR Corporation | Software Engineer</h2>
-        <span class="date">Feb 2021 – Aug 2022</span>
-        <ul>
-          <li>Developed and maintained the Exxon Mobil Rewards application using Java, ensuring seamless integration with Fuel Panther and POS systems, improving transaction processing efficiency by 30%.</li>
-          <li>Converted over 100 Windows-based images to Linux-based images for the Panther fuel controller and set up 15 onsite VM servers using VMware, enhancing system performance and resource optimization by 25%.</li>
-          <li>Utilized SQL Server for managing over 1 million transaction records, and implemented automated batch processes using batch scripting, reducing end-of-day report generation time by 50% and improving data accessibility in RSM.</li>
-        </ul>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="content">
+      <h1>Projects & Innovation</h1>
+      <div class="card-grid">
+        
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">AI SRE Agent</div>
+            <div class="card-subtitle">Python, LLM, Prometheus, Slack API</div>
+          </div>
+          <p>Designing an AI-driven SRE agent that listens to Slack alerts, parses error logs, auto-queries Prometheus and OpenObserve for metrics, and uses LLMs to analyze root causes and post business impact summaries directly to Slack threads.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Multi-Cluster Automation</div>
+            <div class="card-subtitle">Python, K8s API, AsyncIO</div>
+          </div>
+          <p>Built high-concurrency Python automation scripts to perform health checks and query metrics across 4,600+ edge Kubernetes clusters, significantly reducing manual troubleshooting time.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Houseanywhere</div>
+            <div class="card-subtitle">Java, Spring Boot, Angular</div>
+          </div>
+          <p>Created a platform to assist students in finding temporary housing. Facilitated housing searches for over 1,000 international students and increased property listings by 50%.</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -98,105 +219,20 @@
   <section id="education" class="section">
     <div class="content">
       <h1>Education</h1>
-  
-      <!-- Education Item: Illinois State University -->
-      <div class="education-item">
-        <h2>Illinois State University</h2>
-        <span class="degree">Master of Science – Computer Science (Data Science Specialization), GPA: 4.0 / 4.0</span>
-        <span class="date">Aug 2022 – Dec 2023</span>
-        
-  
-      <!-- Education Item: K L University -->
-      <div class="education-item">
-        <h2>K L University</h2>
-        <span class="degree">Bachelor of Technology – Computer Science, GPA: 9.02 / 10.0</span>
-        <span class="date">Jun 2017 – May 2021</span>
-        <!-- Expand/Collapse Button -->
-        
-      </div>
-  
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="content">
-      <h1>Projects</h1>
-      <div class="project-item">
-        <h2>Houseanywhere</h2>
-        <span class="tech-stack">(Java, Spring Boot, MySQL, Angular)</span>
-        <p>Created a platform to assist students in finding temporary housing and enabled homeowners to list available properties. Facilitated housing searches for over 1,000 international students and increased property listings by 50%, streamlining the accommodation process.</p>
-      </div>
-      <div class="project-item">
-        <h2>COVID-19 Adverse Reactions Study</h2>
-        <span class="tech-stack">(Python, Django, MySQL, Scikit-learn, Pandas)</span>
-        <p>Conducted a comprehensive study on the side effects of COVID-19 treatments using data analysis and machine learning. Identified significant patterns in adverse reactions, contributing to improved treatment protocols and enhancing patient safety.</p>
-      </div>
-      <div class="project-item">
-        <h2>File Retrieval Engineer</h2>
-        <span class="tech-stack">(Java, WebSocket, Docker)</span>
-        <p>Designed and implemented a parallel file retrieval system connecting multiple clients, utilizing tokenization and word indexing. Leveraged ConcurrentHashMap and synchronization methods for multithreading, improving system reliability and performance. Achieved a 40% increase in file transfer speed and enhanced real-time communication using WebSocket and Docker.</p>
-      </div>
-    </div>
-  </section>
-
-  
-<!-- Certifications & Publications Section -->
-<section id="certifications" class="section">
-  <div class="content">
-    <h1>Certifications</h1>
-    <div class="carousel-container">
-      <div class="carousel">
-        <div class="carousel-card">
-          <h2>AWS Solutions Architect Associate</h2>
-          <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/119031e6150544aaa21d7975e279e809" target="_blank" rel="noopener noreferrer">View Certification</a>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Illinois State University</div>
+            <div class="card-subtitle">M.S. Computer Science (Data Science)</div>
+            <div class="card-date">GPA: 4.0 / 4.0</div>
+          </div>
         </div>
-        <div class="carousel-card">
-          <h2>Certified Kubernetes Application Developer</h2>
-          <a href="https://www.credly.com/badges/032ffa25-273c-4ca9-8fee-6415c96a0a9b" target="_blank" rel="noopener noreferrer">View Certification</a>
-        </div>
-        <div class="carousel-card">
-          <h2>Automation Anywhere Certified Advanced RPA Professional</h2>
-          <a href="https://certificates.automationanywhere.com/70fe5d18-1d74-4c6f-97fb-461e92271ffe#gs.eiadnc" target="_blank" rel="noopener noreferrer">View Certification</a>
-        </div>
-        <!-- Add more cards as needed -->
-      </div>
-      <!-- Navigation Indicators -->
-      <div class="carousel-nav">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        
-        <!-- Add more dots corresponding to the number of cards -->
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <div class="content">
-      <h1>Skills</h1>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h2>Programming Languages</h2>
-          <p>C/C++, Python, Bash Scripting, SQL, NoSQL, JavaScript, Java, HTML, CSS, R</p>
-        </div>
-        <div class="skill-category">
-          <h2>Frameworks & Libraries</h2>
-          <p>Hadoop, TensorFlow, OpenCV, NumPy, Pandas, CNN, React, D3.js, Spring, Node.js</p>
-        </div>
-        <div class="skill-category">
-          <h2>Databases</h2>
-          <p>MySQL, Oracle 11g, MongoDB, PostgreSQL, Redis</p>
-        </div>
-        <div class="skill-category">
-          <h2>DevOps & Tools</h2>
-          <p>ELK Stack, Docker, Kubernetes, Bitbucket, GitHub Actions, AWS, Azure</p>
-        </div>
-        <div class="skill-category">
-          <h2>Others</h2>
-          <p>Linux, REST API, HTTP, TCP/IP, Kafka, WebSocket, Jira, Confluence, Datadog, Databricks</p>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">K L University</div>
+            <div class="card-subtitle">B.Tech Computer Science</div>
+            <div class="card-date">GPA: 9.02 / 10.0</div>
+          </div>
         </div>
       </div>
     </div>
@@ -206,24 +242,31 @@
   <section id="contact" class="section">
     <div class="content">
       <h1>Contact Me</h1>
-      <p>Feel free to reach out for collaborations or opportunities.</p>
-      <div class="contact-details">
-        <p><i class="fas fa-envelope"></i> <a href="mailto:yasodaakrishna@gmail.com">yasodaakrishna@gmail.com</a></p>
-        <p><i class="fas fa-phone"></i> +1 (309) 750-9199</p>
-        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/yannapu" target="_blank">LinkedIn Profile</a></p>
-        <p><i class="fab fa-github"></i> <a href="https://github.com/yasoda-krishna" target="_blank">GitHub Profile</a></p>
+      <p style="text-align: center;">Let's connect to discuss DevOps, SRE, or AI-driven infrastructure.</p>
+      <div class="contact-links">
+        <a href="mailto:yasodaakrishna@gmail.com" class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>Email</span>
+        </a>
+        <a href="https://www.linkedin.com/in/yannapu" target="_blank" class="contact-item">
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/yasoda-krishna" target="_blank" class="contact-item">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
       </div>
     </div>
   </section>
+
   <footer>
-    <p>&copy; 2024 Yasoda Krishna Annapureddy. All Rights Reserved.</p>
+    <p>&copy; 2024 Yasoda Krishna Annapureddy. Built with Code & Caffeine.</p>
   </footer>
 
-  <!-- Include GSAP and ScrollTrigger -->
-  <!-- Include GSAP and Plugins -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
-</html>  
+</html>
