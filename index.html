@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Yasoda Krishna Annapureddy | Senior SRE/DevOps Engineer</title>
@@ -7,10 +8,13 @@
   <!-- Link to CSS -->
   <link rel="stylesheet" href="styles.css">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
   <!-- Navigation -->
@@ -48,10 +52,14 @@
     <div class="content">
       <h1>About Me</h1>
       <p>
-        I manage and automate deployments, observability, and reliability for thousands of Kubernetes clusters at Walmart—building AI-powered SRE tools, enhancing Istio-based service mesh operations, driving org-wide deployment strategies, and leading high-scale troubleshooting across CPC systems.
+        I manage and automate deployments, observability, and reliability for thousands of Kubernetes clusters at
+        Walmart—building AI-powered SRE tools, enhancing Istio-based service mesh operations, driving org-wide
+        deployment strategies, and leading high-scale troubleshooting across CPC systems.
       </p>
       <p>
-        I am a Senior SRE/DevOps Engineer at Walmart, working across cloud + 4,600+ edge Kubernetes clusters in the CPC (Customer Platform & Checkout) organization. My work spans deployment strategy, observability, automation, microservices reliability, and AI-driven tooling.
+        I am a Senior SRE/DevOps Engineer at Walmart, working across cloud + 4,600+ edge Kubernetes clusters in the CPC
+        (Customer Platform & Checkout) organization. My work spans deployment strategy, observability, automation,
+        microservices reliability, and AI-driven tooling.
       </p>
     </div>
   </section>
@@ -59,63 +67,96 @@
   <!-- Experience Section -->
   <section id="experience" class="section">
     <div class="content">
-      <h1>Professional Experience</h1>
-      <div class="card-grid">
-        
+      <h1>Experience Log</h1>
+      <div class="timeline">
+
         <!-- Walmart -->
-        <div class="card">
-          <div class="card-header">
-            <div class="card-title">Walmart Global Tech</div>
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <div class="terminal-header">
+              <span>root@walmart-cpc:~</span>
+              <div class="terminal-controls">
+                <div class="terminal-dot"></div>
+                <div class="terminal-dot"></div>
+                <div class="terminal-dot"></div>
+              </div>
+            </div>
+            <div class="terminal-command">./view_job --id=walmart --role=sre</div>
+            <h2>Walmart Global Tech</h2>
             <div class="card-subtitle">Senior SRE/DevOps Engineer</div>
             <div class="card-date">Present</div>
+            <ul>
+              <li>Managed 4,600+ Edge Kubernetes clusters.</li>
+              <li>Led Stage1 → Stage4 progressive rollouts.</li>
+              <li>Designed AI SRE Agent for auto-remediation.</li>
+            </ul>
           </div>
-          <ul>
-            <li><strong>Kubernetes & Deployment Infrastructure:</strong> Manage multi-tenant Kubernetes platforms (Azure + 4,600+ Edge clusters). Lead deployments using Helm3, Flagger canary analysis, and Istio service mesh. Handle progressive rollouts (Stage1 → Stage4) using Looper CI, Concord, and ArgoCD.</li>
-            <li><strong>Observability & Monitoring:</strong> Deep expertise in Prometheus (PromQL, SLOs), Grafana (latency, p99 trends), OpenObserve, and Splunk. Proactively monitor 5xx/4xx spikes and investigate requestRoute-level failures.</li>
-            <li><strong>Service Mesh (Istio):</strong> Manage VirtualService, DestinationRule, Sidecar injection, and failover configurations. Troubleshoot mTLS and Envoy performance issues.</li>
-            <li><strong>Large-Scale Automation:</strong> Build Python automation for multi-cluster health checks and Slack-triggered workflows. Design concurrency scripts to query metrics across thousands of clusters.</li>
-            <li><strong>AI-Driven SRE:</strong> Designing an AI SRE Agent that parses Slack alerts, auto-queries Prometheus/OpenObserve, analyzes errors using LLM, and posts root cause analysis.</li>
-          </ul>
         </div>
 
-        <!-- IQIT Solutions -->
-        <div class="card">
-          <div class="card-header">
-            <div class="card-title">IQIT Solutions</div>
+        <!-- IQIT -->
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <div class="terminal-header">
+              <span>dev@iqit-solutions:~</span>
+              <div class="terminal-controls">
+                <div class="terminal-dot"></div>
+                <div class="terminal-dot"></div>
+                <div class="terminal-dot"></div>
+              </div>
+            </div>
+            <div class="terminal-command">./view_job --id=iqit --role=swe</div>
+            <h2>IQIT Solutions</h2>
             <div class="card-subtitle">Software Engineer</div>
             <div class="card-date">Jan 2024 – Jul 2024</div>
+            <ul>
+              <li>Developed TrueCare app (React/Spring Boot).</li>
+              <li>Optimized microservices with Docker/K8s.</li>
+            </ul>
           </div>
-          <ul>
-            <li>Developed the TrueCare application using React and Java Spring Boot, enhancing usability for over 65,000 users.</li>
-            <li>Utilized Docker and Kubernetes for microservices architecture, improving deployment efficiency by 35%.</li>
-            <li>Implemented SSIS scripts with SQL Server to reduce data processing time by 30%.</li>
-          </ul>
         </div>
 
-        <!-- Illinois State University -->
-        <div class="card">
-          <div class="card-header">
-            <div class="card-title">Illinois State University</div>
+        <!-- ISU -->
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <div class="terminal-header">
+              <span>student@isu-edu:~</span>
+              <div class="terminal-controls">
+                <div class="terminal-dot"></div>
+                <div class="terminal-dot"></div>
+                <div class="terminal-dot"></div>
+              </div>
+            </div>
+            <div class="terminal-command">./view_job --id=isu --role=grad_assistant</div>
+            <h2>Illinois State University</h2>
             <div class="card-subtitle">Graduate Assistant</div>
             <div class="card-date">Aug 2022 – Dec 2023</div>
+            <ul>
+              <li>Built ISU Code app for exam automation.</li>
+              <li>Implemented OAuth/SSO security.</li>
+            </ul>
           </div>
-          <ul>
-            <li>Developed the ISU Code application using Node.js, React, and OAuth, automating the testing process for over 200 students.</li>
-            <li>Implemented student authentication using SSO and OAuth, enhancing security.</li>
-          </ul>
         </div>
 
-        <!-- NCR Corporation -->
-        <div class="card">
-          <div class="card-header">
-            <div class="card-title">NCR Corporation</div>
+        <!-- NCR -->
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <div class="terminal-header">
+              <span>eng@ncr-corp:~</span>
+              <div class="terminal-controls">
+                <div class="terminal-dot"></div>
+                <div class="terminal-dot"></div>
+                <div class="terminal-dot"></div>
+              </div>
+            </div>
+            <div class="terminal-command">./view_job --id=ncr --role=swe</div>
+            <h2>NCR Corporation</h2>
             <div class="card-subtitle">Software Engineer</div>
             <div class="card-date">Feb 2021 – Aug 2022</div>
+            <ul>
+              <li>Enhanced Exxon Mobil Rewards app.</li>
+              <li>Migrated 100+ Windows images to Linux.</li>
+            </ul>
           </div>
-          <ul>
-            <li>Developed the Exxon Mobil Rewards application using Java, improving transaction processing efficiency by 30%.</li>
-            <li>Converted over 100 Windows-based images to Linux-based images for fuel controllers, enhancing system performance.</li>
-          </ul>
         </div>
 
       </div>
@@ -127,7 +168,7 @@
     <div class="content">
       <h1>Technical Skills</h1>
       <div class="skills-container">
-        
+
         <div class="skill-category">
           <h3>Kubernetes & Cloud</h3>
           <div class="skill-tags">
@@ -186,13 +227,15 @@
     <div class="content">
       <h1>Projects & Innovation</h1>
       <div class="card-grid">
-        
+
         <div class="card">
           <div class="card-header">
             <div class="card-title">AI SRE Agent</div>
             <div class="card-subtitle">Python, LLM, Prometheus, Slack API</div>
           </div>
-          <p>Designing an AI-driven SRE agent that listens to Slack alerts, parses error logs, auto-queries Prometheus and OpenObserve for metrics, and uses LLMs to analyze root causes and post business impact summaries directly to Slack threads.</p>
+          <p>Designing an AI-driven SRE agent that listens to Slack alerts, parses error logs, auto-queries Prometheus
+            and OpenObserve for metrics, and uses LLMs to analyze root causes and post business impact summaries
+            directly to Slack threads.</p>
         </div>
 
         <div class="card">
@@ -200,7 +243,8 @@
             <div class="card-title">Multi-Cluster Automation</div>
             <div class="card-subtitle">Python, K8s API, AsyncIO</div>
           </div>
-          <p>Built high-concurrency Python automation scripts to perform health checks and query metrics across 4,600+ edge Kubernetes clusters, significantly reducing manual troubleshooting time.</p>
+          <p>Built high-concurrency Python automation scripts to perform health checks and query metrics across 4,600+
+            edge Kubernetes clusters, significantly reducing manual troubleshooting time.</p>
         </div>
 
         <div class="card">
@@ -208,7 +252,8 @@
             <div class="card-title">Houseanywhere</div>
             <div class="card-subtitle">Java, Spring Boot, Angular</div>
           </div>
-          <p>Created a platform to assist students in finding temporary housing. Facilitated housing searches for over 1,000 international students and increased property listings by 50%.</p>
+          <p>Created a platform to assist students in finding temporary housing. Facilitated housing searches for over
+            1,000 international students and increased property listings by 50%.</p>
         </div>
 
       </div>
@@ -269,4 +314,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>

@@ -16,7 +16,7 @@ let typeSpeed = 100;
 
 function type() {
   const currentRole = roles[roleIndex];
-  
+
   if (isDeleting) {
     typingText.textContent = currentRole.substring(0, charIndex - 1);
     charIndex--;
@@ -63,7 +63,7 @@ const navLinksItems = document.querySelectorAll('.nav-links li');
 
 burger.addEventListener('click', () => {
   navLinks.classList.toggle('nav-active');
-  
+
   // Animate Links
   navLinksItems.forEach((link, index) => {
     if (link.style.animation) {
@@ -81,7 +81,7 @@ burger.addEventListener('click', () => {
 const sections = document.querySelectorAll('.section');
 
 sections.forEach(section => {
-  gsap.fromTo(section.children, 
+  gsap.fromTo(section.children,
     { y: 50, opacity: 0 },
     {
       y: 0,
@@ -97,6 +97,27 @@ sections.forEach(section => {
   );
 });
 
+// Timeline Animations
+const timelineItems = document.querySelectorAll('.timeline-item');
+
+timelineItems.forEach((item, index) => {
+  const direction = index % 2 === 0 ? -50 : 50; // Slide from left or right
+
+  gsap.fromTo(item,
+    { x: direction, opacity: 0 },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 0.8,
+      scrollTrigger: {
+        trigger: item,
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      }
+    }
+  );
+});
+
 // Card Hover Effects (Tilt)
 const cards = document.querySelectorAll('.card');
 
@@ -105,7 +126,7 @@ cards.forEach(card => {
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    
+
     card.style.setProperty('--x', `${x}px`);
     card.style.setProperty('--y', `${y}px`);
   });
